@@ -6,6 +6,10 @@ let rideCymbals = new Array(16).fill(false);
 
 toggleDrum = (arrayName, indexNumber) => {
 
+    if ( arrayName===undefined || indexNumber === undefined ) {
+        return console.log('Missing arguments!')
+    }
+
     if (indexNumber<0 || indexNumber>15) {
         return console.log('IndexNumber invalid! Must be 0-15')
     } else {
@@ -85,6 +89,7 @@ invert = (arrayName) => {
         }
     } else {console.log('Array name is invalid!!')}
 }
+
 
  
 
