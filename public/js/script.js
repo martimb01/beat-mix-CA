@@ -20,7 +20,7 @@ toggleDrum = (arrayName, indexNumber) => {
                     snares[indexNumber] = false;
                 } else {snares[indexNumber] = true}
             break;
-            case 'hihats':
+            case 'hiHats':
                 if (hiHats[indexNumber] === true) {
                     hiHats[indexNumber] = false;
                 } else {hiHats[indexNumber] = true}
@@ -38,20 +38,53 @@ toggleDrum = (arrayName, indexNumber) => {
 }
 
 clear = (arrayName) => {
-
-    return arrayName.fill(false);
-
+    
+    if (arrayName === 'kicks') {
+        kicks.fill(false);
+    } else if (arrayName === 'snares') {
+        snares.fill(false);
+    } else if (arrayName === 'hiHats') {
+        hiHats.fill(false);
+    } else if (arrayName === 'rideCymbals') {
+        rideCymbals.fill(false)
+    } else {console.log('Array name is invalid!!')}
+    
 }
 
 invert = (arrayName) => {
+    if (arrayName === 'kicks') {
 
-    for (i=0; i<arrayName.length; i++ ) {
+        for (i=0; i<kicks.length; i++) {
+            if (kicks[i]=== true) {
+                kicks[i] = false;
+            } else {kicks[i] = true}
+        }
+        
+    } else if (arrayName === 'snares') {
+        
+        for (i=0; i<snares.length; i++) {
+            if (snares[i]=== true) {
+                snares[i] = false;
+            } else {snares[i] = true}
+        }
 
-        if (arrayName[i] === true) {
+    } else if (arrayName === 'hiHats') {
+        
+        for (i=0; i<hiHats.length; i++) {
+            if (hiHats[i]=== true) {
+                hiHats[i] = false;
+            } else {hiHats[i] = true}
+        }
 
-            arrayName[i] = false;
-
-        } else {arrayName[i] = true}
-    }
+    } else if (arrayName === 'rideCymbals') {
+        
+        for (i=0; i<rideCymbals.length; i++) {
+            if (rideCymbals[i]=== true) {
+                rideCymbals[i] = false;
+            } else {rideCymbals[i] = true}
+        }
+    } else {console.log('Array name is invalid!!')}
 }
+
+ 
 
